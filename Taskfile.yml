@@ -1,0 +1,12 @@
+version: '3'
+
+tasks:
+  compile-proto:
+    summary: |
+      Compile protobuf files into Go.
+    cmds:
+      - protoc api/v1/*.proto --go_out=. --go_opt=paths=source_relative --proto_path=.
+    sources:
+      - api/v1/*.proto
+    generates:
+      - api/v1/*.pb.go

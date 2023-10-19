@@ -19,3 +19,6 @@
 
 # Go workspace file
 go.work
+
+# Directory where checksums for sources of task are being stored.
+.task/
